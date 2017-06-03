@@ -20,8 +20,8 @@
 
 // ## INCLUDES ################################################################
 
-#include "face_detector.h"
-#include "error.h"
+#include <facetools/face_detector.h>
+#include <facetools/error.h>
 
 #include <algorithm>
 

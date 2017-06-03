@@ -21,8 +21,8 @@
 
 // ## INCLUDES ################################################################
 
-#include "face_recogniser.h"
-#include "error.h"
+#include <facetools/face_recogniser.h>
+#include <facetools/error.h>
 
 
 // ## NAMESPACES ##############################################################

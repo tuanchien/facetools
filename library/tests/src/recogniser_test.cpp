@@ -18,9 +18,9 @@
 #include <stdexcept>
 #include <vector>
 
-#include "face_detector.h"
-#include "face_recogniser.h"
-#include "error.h"
+#include <facetools/face_detector.h>
+#include <facetools/face_recogniser.h>
+#include <facetools/error.h>
 
 
 // ## NAMESPACES ##################################################################################

@@ -13,7 +13,7 @@
 #include <iostream>
 #include <stdexcept>
 
-#include "error.h"
+#include <facetools/error.h>
 
 
 // ## NAMESPACES ##############################################################

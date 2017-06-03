@@ -55,4 +55,6 @@ set_target_properties(facetools PROPERTIES
 add_executable(facetools_validation ${SOURCES})
 link_directories(${LINK_DIRECTORIES})
 target_link_libraries (facetools_validation LINK_PUBLIC ${LINK_LIBRARIES})
-add_dependencies(facetools_validation facetools_static)
+add_dependencies(facetools_validation facetools)
+add_dependencies(facetools_validation gtest_main)
+add_dependencies(facetools_validation gtest)
