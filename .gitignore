@@ -1,3 +1,7 @@
+# IDE or text editor files
+*.swp
+.vscode/*
+
 # Prerequisites
 *.d
 
@@ -30,3 +34,15 @@
 *.exe
 *.out
 *.app
+
+# CMake build directory
+build/*
+
+# Google Test headers
+gtest/include/*
+
+# Test data
+test_data/*
+
+# Models
+*.dat
