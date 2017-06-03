@@ -1,0 +1,6 @@
+1. Download Google Test. See: https://github.com/google/googletest
+2. Compile it.
+3. Put the *.a static libraries here.
+4. mkdir include
+5. cp -r /path/to/google/test/include include [e.g., cp -r /usr/include/gtest include/]
+You should end up with a directory in include called 'gtest'.
