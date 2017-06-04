@@ -64,7 +64,7 @@ void command_line_parser::print_usage(char** argv)
     "Options:\n"
     "  -j or --jitter\t Apply jitter averaging. Makes it more robust.\n"
     "  -m or --mmod\t\t Uses the max marginal object face detection method.\n"
-    "              \t\t Slow but more accurate [Recommended if you have powerful GPU].\n"
+    "              \t\t Slow but more accurate [recommended if you have powerful GPU].\n"
     "  -t or --threshold\t Distance threshold to use for determining face similarity. Default: 0.6.\n"
   ;
 
