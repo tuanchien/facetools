@@ -17,3 +17,5 @@ add_subdirectory (tests/facegrep)
 enable_testing ()
 add_test (NAME facetools_validation COMMAND facetools_validation)
 add_test (NAME facegrep_validation COMMAND facegrep_validation)
+
+install(CODE "execute_process(COMMAND ldconfig)")

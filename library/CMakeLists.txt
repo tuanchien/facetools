@@ -19,3 +19,4 @@ set_target_properties(facetools_shared PROPERTIES OUTPUT_NAME facetools)
 install(TARGETS facetools_shared DESTINATION /usr/local/lib)
 
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include DESTINATION /usr/local)
+install(CODE "execute_process(COMMAND chmod +x /usr/local/lib/libfacetools.so)")
