@@ -46,3 +46,4 @@ test_data/*
 
 # Models
 *.dat
+*.bz2
