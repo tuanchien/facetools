@@ -23,12 +23,12 @@ namespace facetools {
 
 // ## FUNCTION DEFINITIONS ####################################################
 
-void expect_true(bool expression, std::string message) noexcept
+bool expect_true(bool expression, std::string message) noexcept
 {
-  if(expression)
-    return;
+  if(!expression)
+    std::cerr << "WARNING: " << message << std::endl;
 
-  std::cerr << "WARNING: " << message << std::endl;
+  return expression;
 }
 
 
