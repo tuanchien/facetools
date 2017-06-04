@@ -1,5 +1,7 @@
 set (CMAKE_CXX_FLAGS "--std=c++14 -O3")
 
+FIND_PACKAGE(dlib 19.4 REQUIRED)
+
 file(GLOB_RECURSE SOURCES src/*.cpp)
 
 set(INCLUDES
@@ -13,3 +15,7 @@ add_library(facetools_shared SHARED ${SOURCES})
 
 set_target_properties(facetools_static PROPERTIES OUTPUT_NAME facetools)
 set_target_properties(facetools_shared PROPERTIES OUTPUT_NAME facetools)
+
+install(TARGETS facetools_shared DESTINATION /usr/local/lib)
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include DESTINATION /usr/local)
