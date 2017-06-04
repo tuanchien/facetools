@@ -1,0 +1,18 @@
+Facetools
+
+A C++ frontend library for face detection and recognition.
+
+Facegrep
+
+A command line tool to search for similar faces (grep for faces).
+
+Prerequisites
+1. CMake 2.8 or later.
+2. dlib 19.4 or later.
+3. Google Test (if you want to compile the tests).
+
+Build
+
+1. mkdir build && cd build
+2. cmake ..
+3. make
