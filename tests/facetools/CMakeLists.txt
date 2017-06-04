@@ -9,7 +9,7 @@ PROJECT(facetools_validation)
 
 set(CMAKE_BUILD_TYPE Release)
 
-set (CMAKE_CXX_FLAGS "-std=c++14 -O3")
+set (CMAKE_CXX_FLAGS "-std=c++14 -O3 -D_DEBUG_")
 
 file(GLOB SOURCES src/*.cpp)
 

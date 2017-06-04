@@ -87,11 +87,9 @@ static face_recogniser get_recogniser(float face_threshold = 0.4, bool jitter_im
 static void print_embedding(embedding_t embedding)
 {
   cout << "Vector: (";
-  for(auto it = embedding.begin(); it != embedding.end(); ++it)
-  {
+  for(auto it = embedding.begin(); it != embedding.end(); ++it) {
     if(it != embedding.begin())
       cout << ", ";
-
     cout << *it;
   }
 
@@ -100,13 +98,15 @@ static void print_embedding(embedding_t embedding)
 
 // ## TESTS #######################################################################################
 
-TEST(face_recogniser, init) {
+TEST(face_recogniser, init)
+{
   auto faces = detect_and_align(BALD_GUYS);
   auto recogniser = get_recogniser();
 }
 
 
-TEST(face_recogniser, get_embeddings_mmod) {
+TEST(face_recogniser, get_embeddings_mmod)
+{
   auto faces = detect_and_align(BALD_GUYS);
   auto recogniser = get_recogniser();
 
@@ -120,7 +120,8 @@ TEST(face_recogniser, get_embeddings_mmod) {
   }
 }
 
-TEST(face_recogniser, get_people_mmod) {
+TEST(face_recogniser, get_people_mmod)
+{
   auto faces = detect_and_align(BALD_GUYS);
   auto recogniser = get_recogniser(0.6);
 
@@ -148,7 +149,8 @@ TEST(face_recogniser, get_people_mmod) {
 }
 
 
-TEST(face_recogniser, get_embeddings_dlib_default) {
+TEST(face_recogniser, get_embeddings_dlib_default)
+{
   auto faces = detect_and_align(BALD_GUYS, face_detector_type_t::DLIB_DEFAULT);
   auto recogniser = get_recogniser();
 
@@ -162,7 +164,8 @@ TEST(face_recogniser, get_embeddings_dlib_default) {
   }
 }
 
-TEST(face_recogniser, get_people_dlib_default) {
+TEST(face_recogniser, get_people_dlib_default)
+{
   auto faces = detect_and_align(BALD_GUYS, face_detector_type_t::DLIB_DEFAULT);
   auto recogniser = get_recogniser(0.6);
 
@@ -190,7 +193,8 @@ TEST(face_recogniser, get_people_dlib_default) {
 }
 
 
-// TEST(face_recogniser, custom_people) {
+// TEST(face_recogniser, custom_people)
+// {
 //   auto faces = detect_and_align("../custom.jpg", face_detector_type_t::MMOD);
 //   auto recogniser = get_recogniser(0.4);
 
