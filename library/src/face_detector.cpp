@@ -69,8 +69,7 @@ std::vector<face> face_detector::detect(dlib::matrix<dlib::rgb_pixel>& image)
   int max_size = std::max(image.nr(), image.nc());
   int times_scaled = 0;
 
-  while(max_size < params_.max_scaling_length && times_scaled < params_.max_scaling_times)
-  {
+  while(max_size < params_.max_scaling_length && times_scaled < params_.max_scaling_times) {
     dlib::pyramid_up(image);
     max_size = std::max(image.nr(), image.nc());
     ++times_scaled;
@@ -98,16 +97,14 @@ dlib::matrix<dlib::rgb_pixel> face_detector::downscale_image(const dlib::matrix<
 
   dlib::matrix<dlib::rgb_pixel> image;
 
-  if(max_dimension > params_.max_scaling_length)
-  {
+  if(max_dimension > params_.max_scaling_length) {
     float scaling = 1.0 * params_.max_scaling_length / (1.0 * max_dimension);
     int resized_width = scaling * input_image.nc();
     int resized_height = scaling * input_image.nr();
     image = dlib::matrix<dlib::rgb_pixel>(resized_height, resized_width);
     dlib::resize_image(input_image, image);
   }
-  else
-  {
+  else {
     image = input_image;
   }
 
@@ -142,8 +139,7 @@ std::vector<face> face_detector::frontal_face_detection_(const dlib::matrix<dlib
   auto detections_size = detections.size();
   std::vector<face> faces(detections_size);
 
-  for(size_t i = 0; i < detections_size; ++i)
-  {
+  for(size_t i = 0; i < detections_size; ++i) {
     face face;
     face.bounding_box = std::move(detections[i]);
     faces[i] = face;
@@ -159,8 +155,7 @@ std::vector<face> face_detector::mmod_detection_(const dlib::matrix<dlib::rgb_pi
   auto detections_size = detections.size();
   std::vector<face> faces(detections_size);
 
-  for(size_t i = 0; i < detections_size; ++i)
-  {
+  for(size_t i = 0; i < detections_size; ++i) {
     face face;
     face.bounding_box = std::move(detections[i]);
     faces[i] = face;

@@ -29,8 +29,7 @@ namespace facetools {
 /** Face
  * Stores face information.
  */
-struct face
-{
+struct face {
   /** Unique face identifier. Currently unused. */
   int id;
 

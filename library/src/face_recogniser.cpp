@@ -59,17 +59,14 @@ std::vector<embedding_t> face_recogniser::get_embedding(const std::vector<face>&
 
   std::vector<embedding_t> embeddings;
 
-  if(params_.jitter_images)
-  {
-    for(int i=0; i<input_faces_size; i++)
-    {
+  if(params_.jitter_images) {
+    for(int i=0; i<input_faces_size; i++) {
       auto jitter_stack = jitter_image_(input_faces[i].image);
       dlib::matrix<float,0,1> face_descriptor = dlib::mean(dlib::mat(recogniser_(jitter_stack)));
       embeddings.push_back(std::move(face_descriptor));
     }
   }
-  else
-  {
+  else {
     for(int i=0; i<input_faces_size; i++)
       faces[i] = input_faces[i].image;
 
@@ -117,10 +114,8 @@ void face_recogniser::chinese_whispers_add_remaining_faces_(std::vector<facelist
   const size_t faces_size, const size_t num_clusters)
 {
   size_t write_position = num_clusters;
-  for(size_t i=0; i<faces_size; ++i)
-  {
-    if(!visited_face[i])
-    {
+  for(size_t i=0; i<faces_size; ++i) {
+    if(!visited_face[i]) {
       people[write_position].push_back(i);
       ++write_position;
     }
@@ -172,8 +167,7 @@ std::vector<dlib::matrix<dlib::rgb_pixel>> face_recogniser::jitter_image_(const 
   std::vector<dlib::matrix<dlib::rgb_pixel>> crops;
 
   dlib::matrix<dlib::rgb_pixel> temp;
-  for (int i = 0; i < 100; ++i)
-  {
+  for (int i = 0; i < 100; ++i) {
     cropper(img, raw_boxes, temp, ignored_crop_boxes);
     crops.push_back(std::move(temp));
   }

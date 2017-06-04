@@ -67,8 +67,7 @@ using mmod_facenet = dlib::loss_mmod<dlib::con<1,9,9,1,1,rcon5<rcon5<rcon5<downs
  * Supported face detection methods.
  * The MMOD method is extremely memory and calculation intensive. Only select if you have a lot of ram or preferrably, a GPU with a lot of ram.
  */
-enum class face_detector_type_t
-{
+enum class face_detector_type_t {
   /** Frontal_face_detector method in dlib. Based off 5 HOG classifiers. */
   DLIB_DEFAULT = 0,
 
@@ -80,8 +79,7 @@ enum class face_detector_type_t
 /**
  * Parameters to initialise the FaceDetector class.
  */
-struct face_detector_parameters_t
-{
+struct face_detector_parameters_t {
   /** Detector we want to use. */
   face_detector_type_t detector_type;
 
@@ -181,8 +179,7 @@ private:
   /**
    * Similar to face_detector_parameters_t.
    */
-  struct internal_parameters_t
-  {
+  struct internal_parameters_t {
     face_detector_type_t detector_type;
     unsigned int max_scaling_times;
     unsigned int max_scaling_length;

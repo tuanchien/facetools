@@ -83,8 +83,7 @@ using resnet_v1 = dlib::loss_metric<dlib::fc_no_bias<128,dlib::avg_pool_everythi
 /**
  * Parameters for the FaceRecogniser class.
  */
-struct face_recogniser_parameters_t
-{
+struct face_recogniser_parameters_t {
   /** Threshold used to determine when two faces are similar. */
   float face_difference_threshold;
 
@@ -111,8 +110,7 @@ using facelist_t = std::vector<unsigned int>;
 
 // ## CLASS DEFINITION ########################################################
 
-class face_recogniser
-{
+class face_recogniser {
 public:
   /**
    * \param Parameters to use.
@@ -162,8 +160,7 @@ private:
 #endif
 
   /** See face_recogniser_parameters_t. */
-  struct internal_parameters_t
-  {
+  struct internal_parameters_t {
     float face_difference_threshold;
     bool jitter_images;
   } params_;

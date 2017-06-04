@@ -27,8 +27,9 @@ namespace facetools {
  * Prints a warning if the expression is not true.
  * \param expression Expression to evaluate.
  * \param error_message Error message.
+ * \return Truth of the expression.
  */
-void expect_true(bool expression, std::string error_message) noexcept;
+bool expect_true(bool expression, std::string error_message) noexcept;
 
 
 /**
