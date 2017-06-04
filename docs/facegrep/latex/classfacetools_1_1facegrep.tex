@@ -1,0 +1,109 @@
+\hypertarget{classfacetools_1_1facegrep}{}\section{facetools\+:\+:facegrep Class Reference}
+\label{classfacetools_1_1facegrep}\index{facetools\+::facegrep@{facetools\+::facegrep}}
+
+
+{\ttfamily \#include $<$facegrep.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfacetools_1_1facegrep_a5a0ae090817ec1dff2d83cdb24c6dbe7}{facegrep} (const \hyperlink{structfacetools_1_1facegrep__parameters__t}{facegrep\+\_\+parameters\+\_\+t} \&params)
+\item 
+void \hyperlink{classfacetools_1_1facegrep_a9f7446ad35f951870378c3c53240303e}{init} (const std\+::string face\+\_\+template\+\_\+file)
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classfacetools_1_1facegrep_a2ce6ed3683d7f53dfa8f1111c338d89d}{search} (const std\+::vector$<$ std\+::string $>$ image\+\_\+files)
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classfacetools_1_1facegrep_a287ef659e9f0293cdd7f2a9f77eeabf1}{search} (const std\+::string face\+\_\+template\+\_\+file, const std\+::vector$<$ std\+::string $>$ image\+\_\+files)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class for finding similar faces. 
+
+Definition at line 58 of file facegrep.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{facetools\+::facegrep@{facetools\+::facegrep}!facegrep@{facegrep}}
+\index{facegrep@{facegrep}!facetools\+::facegrep@{facetools\+::facegrep}}
+\subsubsection[{\texorpdfstring{facegrep(const facegrep\+\_\+parameters\+\_\+t \&params)}{facegrep(const facegrep_parameters_t &params)}}]{\setlength{\rightskip}{0pt plus 5cm}facetools\+::facegrep\+::facegrep (
+\begin{DoxyParamCaption}
+\item[{const {\bf facegrep\+\_\+parameters\+\_\+t} \&}]{params}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1facegrep_a5a0ae090817ec1dff2d83cdb24c6dbe7}{}\label{classfacetools_1_1facegrep_a5a0ae090817ec1dff2d83cdb24c6dbe7}
+Constructs a facegrep object. 
+\begin{DoxyParams}{Parameters}
+{\em params} & Parameters to initialise facegrep with. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file facegrep.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{facetools\+::facegrep@{facetools\+::facegrep}!init@{init}}
+\index{init@{init}!facetools\+::facegrep@{facetools\+::facegrep}}
+\subsubsection[{\texorpdfstring{init(const std\+::string face\+\_\+template\+\_\+file)}{init(const std::string face_template_file)}}]{\setlength{\rightskip}{0pt plus 5cm}void facetools\+::facegrep\+::init (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{face\+\_\+template\+\_\+file}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1facegrep_a9f7446ad35f951870378c3c53240303e}{}\label{classfacetools_1_1facegrep_a9f7446ad35f951870378c3c53240303e}
+Initialises facegrep. Required before performing a search function. 
+\begin{DoxyParams}{Parameters}
+{\em face\+\_\+template\+\_\+file} & Face we\textquotesingle{}re searching for. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file facegrep.\+cpp.
+
+\index{facetools\+::facegrep@{facetools\+::facegrep}!search@{search}}
+\index{search@{search}!facetools\+::facegrep@{facetools\+::facegrep}}
+\subsubsection[{\texorpdfstring{search(const std\+::vector$<$ std\+::string $>$ image\+\_\+files)}{search(const std::vector< std::string > image_files)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ facetools\+::facegrep\+::search (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$}]{image\+\_\+files}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1facegrep_a2ce6ed3683d7f53dfa8f1111c338d89d}{}\label{classfacetools_1_1facegrep_a2ce6ed3683d7f53dfa8f1111c338d89d}
+Tries to find the face template in the image files given. 
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+files} & List of image file names to search through for the template face. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of image files where matches were found. 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file facegrep.\+cpp.
+
+\index{facetools\+::facegrep@{facetools\+::facegrep}!search@{search}}
+\index{search@{search}!facetools\+::facegrep@{facetools\+::facegrep}}
+\subsubsection[{\texorpdfstring{search(const std\+::string face\+\_\+template\+\_\+file, const std\+::vector$<$ std\+::string $>$ image\+\_\+files)}{search(const std::string face_template_file, const std::vector< std::string > image_files)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ facetools\+::facegrep\+::search (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{face\+\_\+template\+\_\+file, }
+\item[{const std\+::vector$<$ std\+::string $>$}]{image\+\_\+files}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1facegrep_a287ef659e9f0293cdd7f2a9f77eeabf1}{}\label{classfacetools_1_1facegrep_a287ef659e9f0293cdd7f2a9f77eeabf1}
+Tries to find the face template in the image files given. 
+\begin{DoxyParams}{Parameters}
+{\em face\+\_\+template\+\_\+file} & Face we\textquotesingle{}re searching for. \\
+\hline
+{\em image\+\_\+files} & List of image file names to search through for the template face. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of image files where matches were found. 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file facegrep.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/mulder/workspace/facetools/apps/facegrep/include/facegrep/facegrep.\+h\item 
+/home/mulder/workspace/facetools/apps/facegrep/src/facegrep.\+cpp\end{DoxyCompactItemize}

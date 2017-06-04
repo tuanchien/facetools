@@ -1,0 +1,189 @@
+\hypertarget{classfacetools_1_1face__detector}{}\section{facetools\+:\+:face\+\_\+detector Class Reference}
+\label{classfacetools_1_1face__detector}\index{facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfacetools_1_1face__detector_a7e449b6a578af11128db93acf749003a}{face\+\_\+detector} (const \hyperlink{structfacetools_1_1face__detector__parameters__t}{face\+\_\+detector\+\_\+parameters\+\_\+t} \&params)
+\item 
+void \hyperlink{classfacetools_1_1face__detector_a356f4bad11b7d26ef2179462c2bb6b1f}{align} (\hyperlink{structfacetools_1_1face}{face} \&\hyperlink{structfacetools_1_1face}{face}, const dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&image)
+\item 
+void \hyperlink{classfacetools_1_1face__detector_a9bf4ec967e8c585b772424a969f9b7f0}{align} (std\+::vector$<$ \hyperlink{structfacetools_1_1face}{face} $>$ \&faces, const dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&image)
+\item 
+std\+::vector$<$ \hyperlink{structfacetools_1_1face}{face} $>$ \hyperlink{classfacetools_1_1face__detector_a00ca01a375173299fb9169acae9509bf}{detect} (dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&image)
+\item 
+std\+::vector$<$ \hyperlink{structfacetools_1_1face}{face} $>$ \hyperlink{classfacetools_1_1face__detector_a5f502ba1a1c91cdd48e97aab4f1e7eee}{detect} (const std\+::string image\+\_\+file)
+\item 
+dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \hyperlink{classfacetools_1_1face__detector_a5fb3e97d411b5a252e16ab3bea0cc121}{downscale\+\_\+image} (const dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&input\+\_\+image)
+\item 
+std\+::vector$<$ \hyperlink{structfacetools_1_1face}{face} $>$ \hyperlink{classfacetools_1_1face__detector_a596351576140fc3cf4fd2ce7238a074d}{extract\+\_\+faces} (const std\+::string image\+\_\+file)
+\item 
+std\+::vector$<$ \hyperlink{structfacetools_1_1face}{face} $>$ \hyperlink{classfacetools_1_1face__detector_ae06b627ad4af04dc4cdd64d7c8786303}{extract\+\_\+faces} (dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&image)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 111 of file face\+\_\+detector.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}!face\+\_\+detector@{face\+\_\+detector}}
+\index{face\+\_\+detector@{face\+\_\+detector}!facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}}
+\subsubsection[{\texorpdfstring{face\+\_\+detector(const face\+\_\+detector\+\_\+parameters\+\_\+t \&params)}{face_detector(const face_detector_parameters_t &params)}}]{\setlength{\rightskip}{0pt plus 5cm}facetools\+::face\+\_\+detector\+::face\+\_\+detector (
+\begin{DoxyParamCaption}
+\item[{const {\bf face\+\_\+detector\+\_\+parameters\+\_\+t} \&}]{params}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1face__detector_a7e449b6a578af11128db93acf749003a}{}\label{classfacetools_1_1face__detector_a7e449b6a578af11128db93acf749003a}
+
+\begin{DoxyParams}{Parameters}
+{\em params} & Structure containing the parameters. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file face\+\_\+detector.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}!align@{align}}
+\index{align@{align}!facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}}
+\subsubsection[{\texorpdfstring{align(face \&face, const dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&image)}{align(face &face, const dlib::matrix< dlib::rgb_pixel > &image)}}]{\setlength{\rightskip}{0pt plus 5cm}void facetools\+::face\+\_\+detector\+::align (
+\begin{DoxyParamCaption}
+\item[{{\bf face} \&}]{face, }
+\item[{const dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&}]{image}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1face__detector_a356f4bad11b7d26ef2179462c2bb6b1f}{}\label{classfacetools_1_1face__detector_a356f4bad11b7d26ef2179462c2bb6b1f}
+Applies an affine transformation to the identified face region to \textquotesingle{}straighten\textquotesingle{} it. Saves it in the face structure. 
+\begin{DoxyParams}{Parameters}
+{\em face} & Face structure to store results and to get facial region information. Returned from a detect call. \\
+\hline
+{\em image} & Image where the face came from. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file face\+\_\+detector.\+cpp.
+
+\index{facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}!align@{align}}
+\index{align@{align}!facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}}
+\subsubsection[{\texorpdfstring{align(std\+::vector$<$ face $>$ \&faces, const dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&image)}{align(std::vector< face > &faces, const dlib::matrix< dlib::rgb_pixel > &image)}}]{\setlength{\rightskip}{0pt plus 5cm}void facetools\+::face\+\_\+detector\+::align (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf face} $>$ \&}]{faces, }
+\item[{const dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&}]{image}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1face__detector_a9bf4ec967e8c585b772424a969f9b7f0}{}\label{classfacetools_1_1face__detector_a9bf4ec967e8c585b772424a969f9b7f0}
+Applies an affine transformation to the identified face region to \textquotesingle{}straighten\textquotesingle{} it. Saves it in the face structure. 
+\begin{DoxyParams}{Parameters}
+{\em faces} & List of face structure to store results and to get facial region information. Returned from a detect call. \\
+\hline
+{\em image} & Image where the face came from. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file face\+\_\+detector.\+cpp.
+
+\index{facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}!detect@{detect}}
+\index{detect@{detect}!facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}}
+\subsubsection[{\texorpdfstring{detect(dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&image)}{detect(dlib::matrix< dlib::rgb_pixel > &image)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf face} $>$ facetools\+::face\+\_\+detector\+::detect (
+\begin{DoxyParamCaption}
+\item[{dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&}]{image}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1face__detector_a00ca01a375173299fb9169acae9509bf}{}\label{classfacetools_1_1face__detector_a00ca01a375173299fb9169acae9509bf}
+Detects all faces in an image. 
+\begin{DoxyParams}{Parameters}
+{\em image} & Image as a matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of faces found. 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file face\+\_\+detector.\+cpp.
+
+\index{facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}!detect@{detect}}
+\index{detect@{detect}!facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}}
+\subsubsection[{\texorpdfstring{detect(const std\+::string image\+\_\+file)}{detect(const std::string image_file)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf face} $>$ facetools\+::face\+\_\+detector\+::detect (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{image\+\_\+file}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1face__detector_a5f502ba1a1c91cdd48e97aab4f1e7eee}{}\label{classfacetools_1_1face__detector_a5f502ba1a1c91cdd48e97aab4f1e7eee}
+Detects all faces in an image. 
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+file} & Image file name (string). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of faces found. 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file face\+\_\+detector.\+cpp.
+
+\index{facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}!downscale\+\_\+image@{downscale\+\_\+image}}
+\index{downscale\+\_\+image@{downscale\+\_\+image}!facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}}
+\subsubsection[{\texorpdfstring{downscale\+\_\+image(const dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&input\+\_\+image)}{downscale_image(const dlib::matrix< dlib::rgb_pixel > &input_image)}}]{\setlength{\rightskip}{0pt plus 5cm}dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ facetools\+::face\+\_\+detector\+::downscale\+\_\+image (
+\begin{DoxyParamCaption}
+\item[{const dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&}]{input\+\_\+image}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1face__detector_a5fb3e97d411b5a252e16ab3bea0cc121}{}\label{classfacetools_1_1face__detector_a5fb3e97d411b5a252e16ab3bea0cc121}
+Downscales the image to have max dimensions (width or height) less than max\+\_\+scaling\+\_\+length (parameter). 
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+image} & Image to downscale. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Downscaled image. 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file face\+\_\+detector.\+cpp.
+
+\index{facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}!extract\+\_\+faces@{extract\+\_\+faces}}
+\index{extract\+\_\+faces@{extract\+\_\+faces}!facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}}
+\subsubsection[{\texorpdfstring{extract\+\_\+faces(const std\+::string image\+\_\+file)}{extract_faces(const std::string image_file)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf face} $>$ facetools\+::face\+\_\+detector\+::extract\+\_\+faces (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{image\+\_\+file}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1face__detector_a596351576140fc3cf4fd2ce7238a074d}{}\label{classfacetools_1_1face__detector_a596351576140fc3cf4fd2ce7238a074d}
+Detect and align faces. 
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+file} & Image file where the face came from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of faces found (including the aligned face images). 
+\end{DoxyReturn}
+
+
+Definition at line 115 of file face\+\_\+detector.\+cpp.
+
+\index{facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}!extract\+\_\+faces@{extract\+\_\+faces}}
+\index{extract\+\_\+faces@{extract\+\_\+faces}!facetools\+::face\+\_\+detector@{facetools\+::face\+\_\+detector}}
+\subsubsection[{\texorpdfstring{extract\+\_\+faces(dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&image)}{extract_faces(dlib::matrix< dlib::rgb_pixel > &image)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf face} $>$ facetools\+::face\+\_\+detector\+::extract\+\_\+faces (
+\begin{DoxyParamCaption}
+\item[{dlib\+::matrix$<$ dlib\+::rgb\+\_\+pixel $>$ \&}]{image}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1face__detector_ae06b627ad4af04dc4cdd64d7c8786303}{}\label{classfacetools_1_1face__detector_ae06b627ad4af04dc4cdd64d7c8786303}
+Detect and align faces. 
+\begin{DoxyParams}{Parameters}
+{\em image} & The image as a matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of faces found (including the aligned face images). 
+\end{DoxyReturn}
+
+
+Definition at line 124 of file face\+\_\+detector.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/mulder/workspace/facetools/library/include/facetools/face\+\_\+detector.\+h\item 
+/home/mulder/workspace/facetools/library/src/face\+\_\+detector.\+cpp\end{DoxyCompactItemize}

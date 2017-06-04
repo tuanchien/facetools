@@ -1,0 +1,126 @@
+\hypertarget{classfile__finder}{}\section{file\+\_\+finder Class Reference}
+\label{classfile__finder}\index{file\+\_\+finder@{file\+\_\+finder}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::string $>$ \hyperlink{classfile__finder_ac6119004ccec4a7256ddd2bed13f83f4}{find} (std\+::vector$<$ std\+::string $>$ search\+\_\+filter, std\+::string search\+\_\+directory)
+\item 
+static std\+::vector$<$ std\+::string $>$ \hyperlink{classfile__finder_aac95f082d2b413830778f97463d9aed9}{find\+\_\+images} (std\+::string search\+\_\+directory)
+\item 
+static int \hyperlink{classfile__finder_a1154d36a33411082bee949ed977087c7}{search\+\_\+callback} (const char $\ast$fpath, const struct stat $\ast$sb, int typeflag)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::string $>$ \hyperlink{classfile__finder_ac566ab0ab5d5f4a7352f3394a7ae298d}{image\+\_\+search\+\_\+filter\+\_\+}
+\item 
+static std\+::vector$<$ std\+::string $>$ \hyperlink{classfile__finder_a407cee5bc1d68cc81e8ea0bef8f15eda}{search\+\_\+filter\+\_\+}
+\item 
+static std\+::vector$<$ std\+::string $>$ \hyperlink{classfile__finder_a40b67eabc93b35b47a4e32ad5146cc48}{files\+\_\+found\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 17 of file file\+\_\+finder.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{file\+\_\+finder@{file\+\_\+finder}!find@{find}}
+\index{find@{find}!file\+\_\+finder@{file\+\_\+finder}}
+\subsubsection[{\texorpdfstring{find(std\+::vector$<$ std\+::string $>$ search\+\_\+filter, std\+::string search\+\_\+directory)}{find(std::vector< std::string > search_filter, std::string search_directory)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ file\+\_\+finder\+::find (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$}]{search\+\_\+filter, }
+\item[{std\+::string}]{search\+\_\+directory}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classfile__finder_ac6119004ccec4a7256ddd2bed13f83f4}{}\label{classfile__finder_ac6119004ccec4a7256ddd2bed13f83f4}
+Finds all files matching the file name filters, in the search directory, including all subdirectories. 
+\begin{DoxyParams}{Parameters}
+{\em search\+\_\+filter} & File name filters. \\
+\hline
+{\em search\+\_\+directory} & Search directory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of matching files. 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file file\+\_\+finder.\+cpp.
+
+\index{file\+\_\+finder@{file\+\_\+finder}!find\+\_\+images@{find\+\_\+images}}
+\index{find\+\_\+images@{find\+\_\+images}!file\+\_\+finder@{file\+\_\+finder}}
+\subsubsection[{\texorpdfstring{find\+\_\+images(std\+::string search\+\_\+directory)}{find_images(std::string search_directory)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ file\+\_\+finder\+::find\+\_\+images (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{search\+\_\+directory}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classfile__finder_aac95f082d2b413830778f97463d9aed9}{}\label{classfile__finder_aac95f082d2b413830778f97463d9aed9}
+Finds all images (files with image filter suffix), in the search directory, including all subdirectories. 
+\begin{DoxyParams}{Parameters}
+{\em search\+\_\+directory} & Search directory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of matching files. 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file file\+\_\+finder.\+cpp.
+
+\index{file\+\_\+finder@{file\+\_\+finder}!search\+\_\+callback@{search\+\_\+callback}}
+\index{search\+\_\+callback@{search\+\_\+callback}!file\+\_\+finder@{file\+\_\+finder}}
+\subsubsection[{\texorpdfstring{search\+\_\+callback(const char $\ast$fpath, const struct stat $\ast$sb, int typeflag)}{search_callback(const char *fpath, const struct stat *sb, int typeflag)}}]{\setlength{\rightskip}{0pt plus 5cm}int file\+\_\+finder\+::search\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fpath, }
+\item[{const struct stat $\ast$}]{sb, }
+\item[{int}]{typeflag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classfile__finder_a1154d36a33411082bee949ed977087c7}{}\label{classfile__finder_a1154d36a33411082bee949ed977087c7}
+Callback for ftw A\+PI. 
+\begin{DoxyParams}{Parameters}
+{\em fpath} & Current matching file name. \\
+\hline
+{\em sb} & Stat structure containing file info. \\
+\hline
+{\em typeflag} & A file type/status flag of the current file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State to ftw. 0 tells it to continue. 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file file\+\_\+finder.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{file\+\_\+finder@{file\+\_\+finder}!files\+\_\+found\+\_\+@{files\+\_\+found\+\_\+}}
+\index{files\+\_\+found\+\_\+@{files\+\_\+found\+\_\+}!file\+\_\+finder@{file\+\_\+finder}}
+\subsubsection[{\texorpdfstring{files\+\_\+found\+\_\+}{files_found_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ file\+\_\+finder\+::files\+\_\+found\+\_\+\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classfile__finder_a40b67eabc93b35b47a4e32ad5146cc48}{}\label{classfile__finder_a40b67eabc93b35b47a4e32ad5146cc48}
+List of files found. 
+
+Definition at line 55 of file file\+\_\+finder.\+h.
+
+\index{file\+\_\+finder@{file\+\_\+finder}!image\+\_\+search\+\_\+filter\+\_\+@{image\+\_\+search\+\_\+filter\+\_\+}}
+\index{image\+\_\+search\+\_\+filter\+\_\+@{image\+\_\+search\+\_\+filter\+\_\+}!file\+\_\+finder@{file\+\_\+finder}}
+\subsubsection[{\texorpdfstring{image\+\_\+search\+\_\+filter\+\_\+}{image_search_filter_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ file\+\_\+finder\+::image\+\_\+search\+\_\+filter\+\_\+\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classfile__finder_ac566ab0ab5d5f4a7352f3394a7ae298d}{}\label{classfile__finder_ac566ab0ab5d5f4a7352f3394a7ae298d}
+Pre-\/defined list of file name matches to look for when looking for images. 
+
+Definition at line 47 of file file\+\_\+finder.\+h.
+
+\index{file\+\_\+finder@{file\+\_\+finder}!search\+\_\+filter\+\_\+@{search\+\_\+filter\+\_\+}}
+\index{search\+\_\+filter\+\_\+@{search\+\_\+filter\+\_\+}!file\+\_\+finder@{file\+\_\+finder}}
+\subsubsection[{\texorpdfstring{search\+\_\+filter\+\_\+}{search_filter_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ file\+\_\+finder\+::search\+\_\+filter\+\_\+\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classfile__finder_a407cee5bc1d68cc81e8ea0bef8f15eda}{}\label{classfile__finder_a407cee5bc1d68cc81e8ea0bef8f15eda}
+User specified search filter. 
+
+Definition at line 51 of file file\+\_\+finder.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/mulder/workspace/facetools/apps/facegrep/include/file\+\_\+finder.\+h\item 
+/home/mulder/workspace/facetools/apps/facegrep/src/file\+\_\+finder.\+cpp\end{DoxyCompactItemize}

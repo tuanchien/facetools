@@ -1,0 +1,139 @@
+\hypertarget{classfacetools_1_1face__recogniser}{}\section{facetools\+:\+:face\+\_\+recogniser Class Reference}
+\label{classfacetools_1_1face__recogniser}\index{facetools\+::face\+\_\+recogniser@{facetools\+::face\+\_\+recogniser}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfacetools_1_1face__recogniser_a4b091ff0164321ddadad92dd082c6639}{face\+\_\+recogniser} (const \hyperlink{structfacetools_1_1face__recogniser__parameters__t}{face\+\_\+recogniser\+\_\+parameters\+\_\+t} \&params)
+\item 
+embedding\+\_\+t \hyperlink{classfacetools_1_1face__recogniser_a9774f8e19f5ae4808efcc39cecc7ceb2}{get\+\_\+embedding} (const \hyperlink{structfacetools_1_1face}{face} \&input\+\_\+face)
+\item 
+std\+::vector$<$ embedding\+\_\+t $>$ \hyperlink{classfacetools_1_1face__recogniser_a8067f4dd21f3ae2930a2d552721f1d32}{get\+\_\+embedding} (const std\+::vector$<$ \hyperlink{structfacetools_1_1face}{face} $>$ \&input\+\_\+faces)
+\item 
+bool \hyperlink{classfacetools_1_1face__recogniser_a45ac64d931a2e2ef0a07c2934b24fe61}{get\+\_\+jitter} () const noexcept
+\item 
+std\+::vector$<$ facelist\+\_\+t $>$ \hyperlink{classfacetools_1_1face__recogniser_abf22c3198b60c504e1ba55764a2ea39b}{get\+\_\+people} (const std\+::vector$<$ embedding\+\_\+t $>$ \&embeddings)
+\item 
+void \hyperlink{classfacetools_1_1face__recogniser_aeef55331efaf5c414441d73aec86c838}{set\+\_\+jitter} (bool state) noexcept
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 113 of file face\+\_\+recogniser.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{facetools\+::face\+\_\+recogniser@{facetools\+::face\+\_\+recogniser}!face\+\_\+recogniser@{face\+\_\+recogniser}}
+\index{face\+\_\+recogniser@{face\+\_\+recogniser}!facetools\+::face\+\_\+recogniser@{facetools\+::face\+\_\+recogniser}}
+\subsubsection[{\texorpdfstring{face\+\_\+recogniser(const face\+\_\+recogniser\+\_\+parameters\+\_\+t \&params)}{face_recogniser(const face_recogniser_parameters_t &params)}}]{\setlength{\rightskip}{0pt plus 5cm}facetools\+::face\+\_\+recogniser\+::face\+\_\+recogniser (
+\begin{DoxyParamCaption}
+\item[{const {\bf face\+\_\+recogniser\+\_\+parameters\+\_\+t} \&}]{params}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1face__recogniser_a4b091ff0164321ddadad92dd082c6639}{}\label{classfacetools_1_1face__recogniser_a4b091ff0164321ddadad92dd082c6639}
+
+\begin{DoxyParams}{Parameters}
+{\em Parameters} & to use. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file face\+\_\+recogniser.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{facetools\+::face\+\_\+recogniser@{facetools\+::face\+\_\+recogniser}!get\+\_\+embedding@{get\+\_\+embedding}}
+\index{get\+\_\+embedding@{get\+\_\+embedding}!facetools\+::face\+\_\+recogniser@{facetools\+::face\+\_\+recogniser}}
+\subsubsection[{\texorpdfstring{get\+\_\+embedding(const face \&input\+\_\+face)}{get_embedding(const face &input_face)}}]{\setlength{\rightskip}{0pt plus 5cm}embedding\+\_\+t facetools\+::face\+\_\+recogniser\+::get\+\_\+embedding (
+\begin{DoxyParamCaption}
+\item[{const {\bf face} \&}]{input\+\_\+face}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1face__recogniser_a9774f8e19f5ae4808efcc39cecc7ceb2}{}\label{classfacetools_1_1face__recogniser_a9774f8e19f5ae4808efcc39cecc7ceb2}
+Get the embedding for the face specified. 
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+face} & Face we want an embedding for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+128 dimensional vector representing the face (embedding). 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file face\+\_\+recogniser.\+cpp.
+
+\index{facetools\+::face\+\_\+recogniser@{facetools\+::face\+\_\+recogniser}!get\+\_\+embedding@{get\+\_\+embedding}}
+\index{get\+\_\+embedding@{get\+\_\+embedding}!facetools\+::face\+\_\+recogniser@{facetools\+::face\+\_\+recogniser}}
+\subsubsection[{\texorpdfstring{get\+\_\+embedding(const std\+::vector$<$ face $>$ \&input\+\_\+faces)}{get_embedding(const std::vector< face > &input_faces)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ embedding\+\_\+t $>$ facetools\+::face\+\_\+recogniser\+::get\+\_\+embedding (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf face} $>$ \&}]{input\+\_\+faces}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1face__recogniser_a8067f4dd21f3ae2930a2d552721f1d32}{}\label{classfacetools_1_1face__recogniser_a8067f4dd21f3ae2930a2d552721f1d32}
+Get the embedding for the list of faces specified. 
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+faces} & List of faces we want an embedding for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of 128 dimensional vectors representing the face (embedding). 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file face\+\_\+recogniser.\+cpp.
+
+\index{facetools\+::face\+\_\+recogniser@{facetools\+::face\+\_\+recogniser}!get\+\_\+jitter@{get\+\_\+jitter}}
+\index{get\+\_\+jitter@{get\+\_\+jitter}!facetools\+::face\+\_\+recogniser@{facetools\+::face\+\_\+recogniser}}
+\subsubsection[{\texorpdfstring{get\+\_\+jitter() const noexcept}{get_jitter() const noexcept}}]{\setlength{\rightskip}{0pt plus 5cm}bool facetools\+::face\+\_\+recogniser\+::get\+\_\+jitter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [noexcept]}}\hypertarget{classfacetools_1_1face__recogniser_a45ac64d931a2e2ef0a07c2934b24fe61}{}\label{classfacetools_1_1face__recogniser_a45ac64d931a2e2ef0a07c2934b24fe61}
+\begin{DoxyReturn}{Returns}
+Whether the jitter\+\_\+images parameter is set. 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file face\+\_\+recogniser.\+cpp.
+
+\index{facetools\+::face\+\_\+recogniser@{facetools\+::face\+\_\+recogniser}!get\+\_\+people@{get\+\_\+people}}
+\index{get\+\_\+people@{get\+\_\+people}!facetools\+::face\+\_\+recogniser@{facetools\+::face\+\_\+recogniser}}
+\subsubsection[{\texorpdfstring{get\+\_\+people(const std\+::vector$<$ embedding\+\_\+t $>$ \&embeddings)}{get_people(const std::vector< embedding_t > &embeddings)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ facelist\+\_\+t $>$ facetools\+::face\+\_\+recogniser\+::get\+\_\+people (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ embedding\+\_\+t $>$ \&}]{embeddings}
+\end{DoxyParamCaption}
+)}\hypertarget{classfacetools_1_1face__recogniser_abf22c3198b60c504e1ba55764a2ea39b}{}\label{classfacetools_1_1face__recogniser_abf22c3198b60c504e1ba55764a2ea39b}
+Gets a list of distinct people found in your image. The indexes are the same as the embedding list. 
+\begin{DoxyParams}{Parameters}
+{\em embeddings} & List of face embeddings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of of embedding indices corresponding to faces. 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file face\+\_\+recogniser.\+cpp.
+
+\index{facetools\+::face\+\_\+recogniser@{facetools\+::face\+\_\+recogniser}!set\+\_\+jitter@{set\+\_\+jitter}}
+\index{set\+\_\+jitter@{set\+\_\+jitter}!facetools\+::face\+\_\+recogniser@{facetools\+::face\+\_\+recogniser}}
+\subsubsection[{\texorpdfstring{set\+\_\+jitter(bool state) noexcept}{set_jitter(bool state) noexcept}}]{\setlength{\rightskip}{0pt plus 5cm}void facetools\+::face\+\_\+recogniser\+::set\+\_\+jitter (
+\begin{DoxyParamCaption}
+\item[{bool}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [noexcept]}}\hypertarget{classfacetools_1_1face__recogniser_aeef55331efaf5c414441d73aec86c838}{}\label{classfacetools_1_1face__recogniser_aeef55331efaf5c414441d73aec86c838}
+Set the jitter\+\_\+images parameter. 
+\begin{DoxyParams}{Parameters}
+{\em state} & New state to set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 92 of file face\+\_\+recogniser.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/mulder/workspace/facetools/library/include/facetools/face\+\_\+recogniser.\+h\item 
+/home/mulder/workspace/facetools/library/src/face\+\_\+recogniser.\+cpp\end{DoxyCompactItemize}

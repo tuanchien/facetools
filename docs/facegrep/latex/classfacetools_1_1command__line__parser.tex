@@ -1,0 +1,67 @@
+\hypertarget{classfacetools_1_1command__line__parser}{}\section{facetools\+:\+:command\+\_\+line\+\_\+parser Class Reference}
+\label{classfacetools_1_1command__line__parser}\index{facetools\+::command\+\_\+line\+\_\+parser@{facetools\+::command\+\_\+line\+\_\+parser}}
+
+
+{\ttfamily \#include $<$command\+\_\+line\+\_\+parser.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{structfacetools_1_1facegrep__commandline__parameters__t}{facegrep\+\_\+commandline\+\_\+parameters\+\_\+t} \hyperlink{classfacetools_1_1command__line__parser_ac5d9adc34ac35ad34a4fcb2fe034146c}{parse} (int argc, char $\ast$$\ast$argv)
+\item 
+static void \hyperlink{classfacetools_1_1command__line__parser_a898ca27fa0e18d903a1a374848030814}{print\+\_\+usage} (char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A command line parsing class based on getopt. 
+
+Definition at line 61 of file command\+\_\+line\+\_\+parser.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{facetools\+::command\+\_\+line\+\_\+parser@{facetools\+::command\+\_\+line\+\_\+parser}!parse@{parse}}
+\index{parse@{parse}!facetools\+::command\+\_\+line\+\_\+parser@{facetools\+::command\+\_\+line\+\_\+parser}}
+\subsubsection[{\texorpdfstring{parse(int argc, char $\ast$$\ast$argv)}{parse(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf facegrep\+\_\+commandline\+\_\+parameters\+\_\+t} facetools\+::command\+\_\+line\+\_\+parser\+::parse (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classfacetools_1_1command__line__parser_ac5d9adc34ac35ad34a4fcb2fe034146c}{}\label{classfacetools_1_1command__line__parser_ac5d9adc34ac35ad34a4fcb2fe034146c}
+Parses the command line for recognised options. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of arguments passed. \\
+\hline
+{\em argv} & An array of arrays, containing the list of arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Facegrep command line parameters. 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file command\+\_\+line\+\_\+parser.\+cpp.
+
+\index{facetools\+::command\+\_\+line\+\_\+parser@{facetools\+::command\+\_\+line\+\_\+parser}!print\+\_\+usage@{print\+\_\+usage}}
+\index{print\+\_\+usage@{print\+\_\+usage}!facetools\+::command\+\_\+line\+\_\+parser@{facetools\+::command\+\_\+line\+\_\+parser}}
+\subsubsection[{\texorpdfstring{print\+\_\+usage(char $\ast$$\ast$argv)}{print_usage(char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}void facetools\+::command\+\_\+line\+\_\+parser\+::print\+\_\+usage (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classfacetools_1_1command__line__parser_a898ca27fa0e18d903a1a374848030814}{}\label{classfacetools_1_1command__line__parser_a898ca27fa0e18d903a1a374848030814}
+Print usage to standard output if there was an error in parsing. 
+\begin{DoxyParams}{Parameters}
+{\em argv} & The list of command line arguments. Only the program name will be used for helping the user decide how to pass arguments to the program. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file command\+\_\+line\+\_\+parser.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/mulder/workspace/facetools/apps/facegrep/include/facegrep/command\+\_\+line\+\_\+parser.\+h\item 
+/home/mulder/workspace/facetools/apps/facegrep/src/command\+\_\+line\+\_\+parser.\+cpp\end{DoxyCompactItemize}
