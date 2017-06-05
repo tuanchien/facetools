@@ -35,7 +35,7 @@ using namespace dlib;
 static const char FACE_DETECTOR_MODEL[] = "../models/mmod_human_face_detector.dat";
 static const char FACE_RECOGNITION_MODEL[] = "../models/dlib_face_recognition_resnet_model_v1.dat";
 static const char SHAPE_PREDICTOR_MODEL[] = "../models/shape_predictor_68_face_landmarks.dat";
-static const char BALD_GUYS[] = "../test_data/facetools_library/bald_guys.jpg";
+static const char BALD_GUYS[] = "../test_data/facetools/bald_guys.jpg";
 
 
 // ## PRIVATE METHODS #############################################################################
