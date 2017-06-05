@@ -2,7 +2,7 @@
 
 A C++ frontend library for face detection and recognition.
 
-### Facegrep
+## Facegrep
 
 A command line tool to search for similar faces (grep for faces), using the facetools framework.
 
@@ -21,7 +21,7 @@ make
 
 To fetch the models during the build process use ```cmake -DGET_MODELS=1 ..``` instead of ```cmake ..```
 
-#### Example facegrep usage
+### Example facegrep usage
 From within the ```facetools/test_data/facegrep/searchdir``` directory,
 
 ```
